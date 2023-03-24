@@ -99,6 +99,8 @@
     tree
     nodejs
     yarn
+    ripgrep
+    watchman
 
     postgresql
     redis
