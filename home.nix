@@ -51,6 +51,7 @@
       gsta = "git stash";
       gstp = "git stash pop";
       gstd = "git stash drop";
+      cf = "git-cf";
     };
   };
 
@@ -85,6 +86,8 @@
 
     postgresql
     redis
+
+    commit-formatter
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
