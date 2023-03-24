@@ -97,8 +97,11 @@
     wezterm
     python3Full
     tree
+
     nodejs
+    nodePackages.typescript
     yarn
+
     ripgrep
     watchman
 
