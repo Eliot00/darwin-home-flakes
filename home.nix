@@ -18,7 +18,6 @@
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
-  programs.vim.enable = true;
   programs.gpg.enable = true;
 
   programs.fish = {

@@ -59,6 +59,7 @@ in
 {
   programs.vim = {
     enable = true;
+    packageConfigurable = pkgs.vim-darwin;
     plugins = with pkgs.vimPlugins; [
       auto-pairs
       coc-nvim
