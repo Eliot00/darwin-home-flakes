@@ -55,35 +55,45 @@ let
       sha256 = "1a/b7Ccovbb9YULO7foMFn0n9taiFlcvk7yT31XZrVw=";
     };
   };
+  git-lens = pkgs.vimUtils.buildVimPlugin {
+    name = "git-lens";
+    src = pkgs.fetchFromGitHub {
+      owner = "Eliot00";
+      repo = "git-lens.vim";
+      rev = "80f65d161587f052c7f5d4e8b97877d9c8379ca0";
+      sha256 = "jbzxhH8rzkiMxXBtddvwSG5lqdfmAlEJztg+8g8HHsI=";
+    };
+  };
 in
 {
   programs.vim = {
     enable = true;
     packageConfigurable = pkgs.vim-darwin;
     plugins = with pkgs.vimPlugins; [
-      auto-pairs
-      coc-nvim
-      coc-tsserver
-      coc-rust-analyzer
-      coc-pyright
-      coc-json
-      coc-html
-      coc-css
-      vim-polyglot
+      LeaderF
       asyncrun-vim
       asynctasks-vim
-      vim-surround
+      auto-pairs
+      coc-css
+      coc-html
+      coc-json
+      coc-nvim
+      coc-pyright
+      coc-rust-analyzer
+      coc-tsserver
+      everforest
+      fern-git-status
+      fern-hijack
+      fern-renderer-nerdfont
+      fern-vim
+      git-lens
+      nerdfont
+      qline
       vim-fugitive
       vim-gitgutter
-      everforest
-      fern-vim
-      fern-hijack
-      fern-git-status
-      fern-renderer-nerdfont
-      nerdfont
-      LeaderF
+      vim-polyglot
       vim-prisma
-      qline
+      vim-surround
     ];
     extraConfig = (builtins.readFile ./init.vim);
   };
