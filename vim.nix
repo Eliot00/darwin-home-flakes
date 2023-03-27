@@ -64,7 +64,6 @@ in
       auto-pairs
       coc-nvim
       coc-tsserver
-      coc-tabnine
       coc-rust-analyzer
       coc-pyright
       coc-json
@@ -77,7 +76,6 @@ in
       vim-fugitive
       vim-gitgutter
       everforest
-      sonokai
       fern-vim
       fern-hijack
       fern-git-status
