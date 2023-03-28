@@ -100,6 +100,7 @@
 
     nodejs
     nodePackages.typescript
+    nodePackages.pnpm
     yarn
 
     ripgrep
