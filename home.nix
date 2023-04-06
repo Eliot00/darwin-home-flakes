@@ -94,8 +94,10 @@
     lxgw-wenkai
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
 
-    wezterm
     python3Full
+    pdm
+
+    wezterm
     tree
 
     nodejs
