@@ -75,9 +75,14 @@
     enable = true;
     extraPackages = epkgs : [
       epkgs.evil
+
       epkgs.company
       epkgs.company-box
+
       epkgs.solo-jazz-theme
+
+      epkgs.org-roam
+      epkgs.org-roam-ui
     ];
   };
 
