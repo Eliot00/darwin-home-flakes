@@ -73,6 +73,12 @@
 
   programs.emacs = {
     enable = true;
+    extraPackages = epkgs : [
+      epkgs.evil
+      epkgs.company
+      epkgs.company-box
+      epkgs.solo-jazz-theme
+    ];
   };
 
   # The home.packages option allows you to install Nix packages into your
