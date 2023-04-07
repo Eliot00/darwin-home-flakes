@@ -73,16 +73,27 @@
 
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs : [
-      epkgs.evil
+    extraPackages = epkgs : with epkgs; [
+      use-package
 
-      epkgs.company
-      epkgs.company-box
+      evil
 
-      epkgs.solo-jazz-theme
+      # programming
+      company
+      company-box
+      flycheck
+      magit
+      vertico
+      orderless
+      marginalia
+      consult
 
-      epkgs.org-roam
-      epkgs.org-roam-ui
+      solo-jazz-theme
+      doom-modeline
+
+      org
+      org-roam
+      org-roam-ui
     ];
   };
 
