@@ -87,7 +87,7 @@
       marginalia
       consult
 
-      solo-jazz-theme
+      ef-themes
       doom-modeline
 
       org
