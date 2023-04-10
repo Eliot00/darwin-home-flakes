@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [ ./vim.nix ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "elliot";
@@ -157,7 +156,6 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     ".config/wezterm/wezterm.lua".source = wezterm/wezterm.lua;
-    ".vim".source = ./vim;
   };
 
   # You can also manage environment variables but you will have to manually

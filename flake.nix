@@ -12,9 +12,13 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    elliot-vim = {
+      url = "github:Eliot00/ElliotVim/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, rust-overlay, ... }:
+  outputs = { nixpkgs, home-manager, rust-overlay, elliot-vim, ... }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -26,6 +30,7 @@
         # the path to your home.nix.
         modules = [
           ./home.nix
+          elliot-vim.homeManagerModules.default
           ({ pkgs, ... }: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];
             home.packages = [
