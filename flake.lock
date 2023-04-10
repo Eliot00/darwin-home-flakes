@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1681093363,
-        "narHash": "sha256-Cm+R9Ujw5jGCLBFzukyZvTXLoXcgHaBcUOSEhdxD+xM=",
+        "lastModified": 1681105602,
+        "narHash": "sha256-MOEMJTgNXg0uClYR9bVItshFG6Vq2e3uEy/D8a6OkeM=",
         "owner": "Eliot00",
         "repo": "ElliotVim",
-        "rev": "a4db503fb65d69a1d252a93b41508b2a0301662a",
+        "rev": "08ed7c522806bdffe2e4f8714c47151785f125f5",
         "type": "github"
       },
       "original": {
