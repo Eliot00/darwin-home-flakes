@@ -80,17 +80,19 @@
       # programming
       company
       company-box
+      consult
       flycheck
       magit
-      vertico
-      orderless
       marginalia
-      consult
+      orderless
+      vertico
 
-      ef-themes
       doom-modeline
+      ef-themes
 
       org
+      org-appear
+      org-modern
       org-roam
       org-roam-ui
     ];
