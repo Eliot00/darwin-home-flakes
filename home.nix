@@ -90,11 +90,12 @@
       doom-modeline
       ef-themes
 
-      org
       org-appear
       org-modern
       org-roam
       org-roam-ui
+
+      ement
     ];
   };
 
