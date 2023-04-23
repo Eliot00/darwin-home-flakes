@@ -60,7 +60,7 @@
     userEmail = "hack00mind@gmail.com";
     aliases = {
       co = "checkout";
-      lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --";
+      lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(bold blue)%s%Creset %Cgreen(%cr) <%an>%Creset' --abbrev-commit --date=relative";
     };
     extraConfig = {
       # Sign all commits using ssh key
