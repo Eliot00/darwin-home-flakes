@@ -86,6 +86,7 @@
       marginalia
       orderless
       vertico
+      consult
 
       doom-modeline
       ef-themes
