@@ -19,15 +19,10 @@
   };
 
   outputs = { nixpkgs, home-manager, rust-overlay, elliot-vim, ... }:
-    let
-      system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    {
       homeConfigurations."mac-mini" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = nixpkgs.legacyPackages."aarch64-darwin";
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
         modules = [
           ./home/mac-mini.nix
           elliot-vim.homeManagerModules.default
@@ -41,8 +36,6 @@
           })
         ];
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
       };
     };
 }
