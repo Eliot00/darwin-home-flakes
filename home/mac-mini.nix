@@ -163,7 +163,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".config/wezterm/wezterm.lua".source = wezterm/wezterm.lua;
+    ".config/wezterm/wezterm.lua".source = ../wezterm/wezterm.lua;
   };
 
   # You can also manage environment variables but you will have to manually
