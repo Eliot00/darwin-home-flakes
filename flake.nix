@@ -37,5 +37,13 @@
         ];
 
       };
+
+      homeConfigurations."macbook" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-darwin";
+          modules = [
+            ./home/macbook.nix
+          ];
+
+      };
     };
 }
