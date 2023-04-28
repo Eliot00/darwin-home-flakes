@@ -150,6 +150,7 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR = "vim";
+    MY_ORG_NOTE_DIR = "/Volumes/Extra/Data/PrivateNotes";
   };
 
   # Let Home Manager install and manage itself.
