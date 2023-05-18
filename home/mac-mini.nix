@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../common/emacs.nix
+    ../common
   ];
 
   home.username = "elliot";
@@ -20,41 +20,6 @@
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.gpg.enable = true;
-
-  programs.fish = {
-    enable = true;
-    plugins = [
-      { name = "hydro"; src = pkgs.fishPlugins.hydro.src; }
-            # Manually packaging and enable a plugin
-      {
-      name = "nix";
-      src = pkgs.fetchFromGitHub {
-        owner = "kidonng";
-        repo = "nix.fish";
-        rev = "19cfe6c7f1e8ae60865b22197fc43506d78888f8";
-        sha256 = "sha256-gVHF7qJrqoiUJm0EirP5uAG37P0rbsFIIlc1TtSKsWE=";
-      };
-    }
-    ];
-    shellAliases = {
-      gst = "git status";
-      gd = "git diff";
-      gdc = "git diff --cached";
-      gl = "git pull";
-      gp = "git push";
-      gco = "git checkout";
-      gcm = "git checkout master";
-      gb = "git branch";
-      gcl = "git config --list";
-      gcp = "git cherry-pick";
-      ga = "git add";
-      gaa = "git add --all";
-      gsta = "git stash";
-      gstp = "git stash pop";
-      gstd = "git stash drop";
-      cf = "git-cf";
-    };
-  };
 
   programs.git = {
     enable = true;
@@ -98,7 +63,6 @@
     python3Full
     pdm
 
-    wezterm
     tree
 
     nodejs
@@ -125,17 +89,6 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-    ".config/wezterm/wezterm.lua".source = ../wezterm/wezterm.lua;
   };
 
   # You can also manage environment variables but you will have to manually
