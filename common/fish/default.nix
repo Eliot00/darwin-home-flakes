@@ -3,19 +3,6 @@
 {
   programs.fish = {
     enable = true;
-    plugins = [
-      { name = "hydro"; src = pkgs.fishPlugins.hydro.src; }
-            # Manually packaging and enable a plugin
-      {
-      name = "nix";
-      src = pkgs.fetchFromGitHub {
-        owner = "kidonng";
-        repo = "nix.fish";
-        rev = "19cfe6c7f1e8ae60865b22197fc43506d78888f8";
-        sha256 = "sha256-gVHF7qJrqoiUJm0EirP5uAG37P0rbsFIIlc1TtSKsWE=";
-      };
-    }
-    ];
     shellAliases = {
       gst = "git status";
       gd = "git diff";
@@ -34,5 +21,9 @@
       gstd = "git stash drop";
       cf = "git-cf";
     };
+  };
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
   };
 }
