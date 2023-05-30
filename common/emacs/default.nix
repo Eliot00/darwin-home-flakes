@@ -28,6 +28,8 @@
       org-roam-ui
 
       ement
+
+      exec-path-from-shell
     ];
   };
 }
