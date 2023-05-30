@@ -18,6 +18,8 @@
       orderless
       vertico
       consult
+      eglot
+      rust-mode
 
       doom-modeline
       ef-themes
