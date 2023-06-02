@@ -68,6 +68,7 @@
     nodejs
     nodePackages.typescript
     nodePackages.pnpm
+    nodePackages.pm2
     yarn
 
     ripgrep
