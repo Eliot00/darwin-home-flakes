@@ -20,6 +20,7 @@
       consult
       eglot
       rust-mode
+      haskell-mode
 
       doom-modeline
       ef-themes
