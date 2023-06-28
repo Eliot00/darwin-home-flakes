@@ -48,7 +48,6 @@
     redis
 
     htop
-    gitui
 
     vim-darwin
   ];

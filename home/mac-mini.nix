@@ -80,7 +80,6 @@
     commit-formatter
 
     htop
-    gitui
 
     dhall
 
