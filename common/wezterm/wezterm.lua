@@ -16,7 +16,7 @@ return {
   },
   font_size = 18.0,
 
-  color_scheme = 'dawnfox',
+  color_scheme = 'Solarized (light) (terminal.sexy)',
 
   keys = {
     -- Split like iterm2
