@@ -63,29 +63,26 @@
     python3Full
     pdm
 
-    tree
-
     nodejs
     nodePackages.typescript
     nodePackages.pnpm
     nodePackages.pm2
     yarn
 
-    ripgrep
-    watchman
-
     postgresql
     redis
 
     commit-formatter
-
-    htop
-
     dhall
-
+    htop
     ots
+    ripgrep
+    tree
+    watchman
 
     rust-analyzer
+
+    vim-darwin
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -12,20 +12,15 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    elliot-vim = {
-      url = "github:Eliot00/ElliotVim/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, home-manager, rust-overlay, elliot-vim, ... }:
+  outputs = { nixpkgs, home-manager, rust-overlay, ... }:
     {
       homeConfigurations."mac-mini" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."aarch64-darwin";
 
         modules = [
           ./home/mac-mini.nix
-          elliot-vim.homeManagerModules.default
           ({ pkgs, ... }: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];
             home.packages = [
