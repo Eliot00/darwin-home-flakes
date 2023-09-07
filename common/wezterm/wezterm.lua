@@ -12,7 +12,7 @@ return {
   font = wezterm.font_with_fallback {
     'Cascadia Code',
     'LXGW WenKai',
-    'CaskaydiaCove Nerd Font',
+    'CaskaydiaCove NFM',
   },
   font_size = 18.0,
 
