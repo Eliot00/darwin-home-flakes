@@ -3,6 +3,7 @@
 {
   programs.emacs = {
     enable = true;
+    package = pkgs.emacsMacport;
     extraPackages = epkgs : with epkgs; [
       use-package
 

@@ -21,10 +21,6 @@
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
 
-  programs.emacs = {
-    package = pkgs.emacsMacport;
-  };
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
