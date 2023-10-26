@@ -1,12 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [
-    ../common
-  ];
-
-  home.username = "elliot";
-  home.homeDirectory = "/Users/elliot";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -15,7 +9,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "22.11"; # Please read the comment before changing.
+  home.stateVersion = "23.11"; # Please read the comment before changing.
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
@@ -60,18 +54,6 @@
     lxgw-wenkai
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
 
-    python3Full
-    pdm
-
-    nodejs
-    nodePackages.typescript
-    nodePackages.pnpm
-    nodePackages.pm2
-    yarn
-
-    postgresql
-    redis
-
     commit-formatter
     dhall
     htop
@@ -79,15 +61,54 @@
     ripgrep
     tree
     watchman
-
-    rust-analyzer
-
-    vim-darwin
   ];
+
+  programs.fish.enable = true;
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.gitui = {
+    enable = true;
+    keyConfig = ''
+      (
+      open_help: Some(( code: F(1), modifiers: ( bits: 0,),)),
+
+      move_left: Some(( code: Char('h'), modifiers: ( bits: 0,),)),
+      move_right: Some(( code: Char('l'), modifiers: ( bits: 0,),)),
+      move_up: Some(( code: Char('k'), modifiers: ( bits: 0,),)),
+      move_down: Some(( code: Char('j'), modifiers: ( bits: 0,),)),
+
+      popup_up: Some(( code: Char('p'), modifiers: ( bits: 2,),)),
+      popup_down: Some(( code: Char('n'), modifiers: ( bits: 2,),)),
+      page_up: Some(( code: Char('b'), modifiers: ( bits: 2,),)),
+      page_down: Some(( code: Char('f'), modifiers: ( bits: 2,),)),
+      home: Some(( code: Char('g'), modifiers: ( bits: 0,),)),
+      end: Some(( code: Char('G'), modifiers: ( bits: 1,),)),
+      shift_up: Some(( code: Char('K'), modifiers: ( bits: 1,),)),
+      shift_down: Some(( code: Char('J'), modifiers: ( bits: 1,),)),
+
+      edit_file: Some(( code: Char('I'), modifiers: ( bits: 1,),)),
+
+      status_reset_item: Some(( code: Char('U'), modifiers: ( bits: 1,),)),
+
+      diff_reset_lines: Some(( code: Char('u'), modifiers: ( bits: 0,),)),
+      diff_stage_lines: Some(( code: Char('s'), modifiers: ( bits: 0,),)),
+
+      stashing_save: Some(( code: Char('w'), modifiers: ( bits: 0,),)),
+      stashing_toggle_index: Some(( code: Char('m'), modifiers: ( bits: 0,),)),
+
+      stash_open: Some(( code: Char('l'), modifiers: ( bits: 0,),)),
+
+      abort_merge: Some(( code: Char('M'), modifiers: ( bits: 1,),)),
+      )
+    '';
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".config/wezterm/wezterm.lua".source = ./wezterm.lua;
   };
 
   # You can also manage environment variables but you will have to manually
@@ -103,8 +124,4 @@
   home.sessionVariables = {
     EDITOR = "vim";
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
 }
